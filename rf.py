@@ -16,4 +16,5 @@ def gui():
 	print(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())+"\n欢迎前来学习的\033[36m"+name+"\033[0m同学！\n")
 	print("1. 开始练习")
 	print("2. 我要出题")
+	print("a. 关于")
 	print("q. 退出程序")

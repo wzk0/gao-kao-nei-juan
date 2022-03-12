@@ -7,6 +7,7 @@ import platform	##系统检测
 import rf	##读取配置
 import random	##随机抽取
 import requests	##获取数据
+import check	##签到机制
 
 def 做题():
 	number=random.randint(a,b)
@@ -50,6 +51,8 @@ print('--- Terminals Exercises (高中) ---\n')
 
 print("\033[32m检查通过！\033[0m")
 
+check.check()
+
 print("目前题库数量:"+数量+"\n")
 
 rf.gui()
@@ -84,6 +87,35 @@ if 模式=='2':
 		os.system(act)
 	else:
 		print("请稍后自己手动编辑"+new+"文件")
+
+if 模式=="a":
+	os.system("clear")
+	time.sleep(1.5)
+	print("Hello！没想到你真的会打开这个诶...")
+	time.sleep(1.5)
+	print("(早知道这样的话我就好好写'关于'了🤔\n")
+	time.sleep(1.5)
+	print("* 关于作者")
+	time.sleep(1.5)
+	print("除了我\033[36m听话的便当\033[0m之外还有谁会做这样一个项目呢?🌚")
+	time.sleep(1.5)
+	print("不过啊不过，还是有用户的嘛！(就比如说正在阅读的\033[36m"+rf.name+"\033[0m)")
+	time.sleep(1.5)
+	print("\n* 关于程序")
+	time.sleep(1.5)
+	print("出于'想玩'的想法制作了这个小程序，算是我最认真，码字量最大的程序了！")
+	time.sleep(1.5)
+	print("\n* 关于积分")
+	time.sleep(1.5)
+	print("(积分其实是没有用的..某种意义上，因为你不能用积分换钱💰，或者从我手里换些什么东西.")
+	time.sleep(1.5)
+	print("不过，你可以将你的积分数目截图发给我(联系方式在博客: https://wzk0.github.io/about)，在我闲(或者投送人数比较多)的时候，我会做一个积分榜单，供大家'攀比'！")
+	time.sleep(1.5)
+	print("喂！不要想着直接修改积分数目！虽然是以明文储存在本地的方式，不要欺骗自己！")
+	time.sleep(1.5)
+	print("\n最后，谢谢你！"+rf.name+"，我的少数用户之一，让我更新下去的动力源泉！")
+	time.sleep(1.5)
+	print("\n❤️")
 
 if 模式=="q":
 	print("Bye~")

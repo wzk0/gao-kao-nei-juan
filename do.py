@@ -1,5 +1,6 @@
 import yaml
 import os
+import check
 
 def 练习(number):
 	config=yaml.load(open(str(number)+'.yaml'),Loader=yaml.FullLoader)
@@ -25,6 +26,7 @@ def 练习(number):
 	print(答案)
 	if answer==答案:
 		print("\n\033[32m回答正确！\033[0m")
+		check.pure()
 		print("虽然回答正确了，但还是看看解析吧！\n")
 		print("\033[36m[解析]\033[0m\n"+解析)
 	else:

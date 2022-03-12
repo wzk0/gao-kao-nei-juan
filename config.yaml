@@ -1,4 +1,12 @@
 main:
   username: 听话的便当
   repo: https://ghproxy.com/https://raw.githubusercontent.com/wzk0/ti-ku/main/
-  ok: 1
+  ok: 0
+
+##username即用户名.
+
+##repo为题库仓库，如果你想自行开发仓库，请务必以数字作为文件名，并添加most.txt(内容为题库数量最大值).建议使用默认题库.
+
+##如果你不想开启Github加速，请手动删去repo中的https://ghproxy.com/.
+
+##完成配置后，请设置ok的值为1.
