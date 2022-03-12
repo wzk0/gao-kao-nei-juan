@@ -68,6 +68,7 @@ if 模式=='1':
 	do.练习(number)
 	again=input("是/否继续?(y/n):")
 	if again=="y":
+		number=random.randint(a,b)
 		做题()
 	else:
 		print("Bye~")
