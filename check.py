@@ -42,3 +42,27 @@ def pure():
 	with open(积分, 'w') as f:
 		f.write(str(现积分))
 	print("现有积分:"+str(现积分))
+
+def all():
+	with open(".temp/all.txt",'r') as f:
+		all=int(f.read())
+	nowall=all+1
+	os.system("rm -rf .temp/all.txt && touch .temp/all.txt")
+	with open(".temp/all.txt",'w') as f:
+		f.write(str(nowall))
+
+def right():
+	with open(".temp/right.txt",'r') as f:
+		right=int(f.read())
+	nowright=right+1
+	os.system("rm -rf .temp/right.txt && touch .temp/right.txt")
+	with open(".temp/right.txt",'w') as f:
+		f.write(str(nowright))
+
+def wrong():
+	with open(".temp/wrong.txt",'r') as f:
+		wrong=int(f.read())
+	nowwrong=wrong+1
+	os.system("rm -rf .temp/wrong.txt && touch .temp/wrong.txt")
+	with open(".temp/wrong.txt",'w') as f:
+		f.write(str(nowwrong))

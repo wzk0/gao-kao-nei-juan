@@ -20,6 +20,19 @@ def 做题():
 	else:
 		pass
 
+def 处理错题():
+	错题=os.listdir("错题本")
+	print("\n错题都有:\n")
+	for wrongti in 错题:
+		print(wrongti)
+	选择=input("\n请输入以上列出的一个文件的数字ID:")
+	do.wrong(选择)
+	again=input("是否(y/n)处理下一道错题:")
+	if again=="y":
+		处理错题()
+	else:
+		pass
+
 os.system('clear')	##清屏
 print('--- Terminals Exercises (高中) ---\n')
 
@@ -87,6 +100,12 @@ if 模式=='2':
 		os.system(act)
 	else:
 		print("请稍后自己手动编辑"+new+"文件")
+
+if 模式=="3":
+	rf.fenxi()
+
+if 模式=="4":
+	处理错题()
 
 if 模式=="a":
 	os.system("clear")
