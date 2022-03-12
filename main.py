@@ -9,6 +9,7 @@ import random	##随机抽取
 import requests	##获取数据
 
 def 做题():
+	number=random.randint(a,b)
 	act="wget "+rf.repo+str(number)+".yaml"
 	os.system(act)
 	do.练习(number)
@@ -68,7 +69,6 @@ if 模式=='1':
 	do.练习(number)
 	again=input("是/否继续?(y/n):")
 	if again=="y":
-		number=random.randint(a,b)
 		做题()
 	else:
 		print("Bye~")
