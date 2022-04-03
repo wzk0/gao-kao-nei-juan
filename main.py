@@ -40,7 +40,12 @@ print("正在检查配置...")
 ##检查config是否配置好
 if rf.ok!=1:
 	print('请打开config.yaml进行配置后再运行脚本！')
-	sys.exit(0)
+	writeconf=input("是否(y/n)直接进行配置:")
+	if writeconf=="y":
+		os.system("nano config.yaml")
+		os.system("clear")
+	else:
+		sys.exit(0)
 else:
 	print("\033[32m√\033[0m\n")
 
@@ -92,20 +97,46 @@ if 模式=='1':
 
 if 模式=='2':
 	new=数量+".yaml"
-	act="cp model.x.yaml "+new
-	os.system(act)
-	write=input("是否直接编辑题目?(y/n):")
-	if write=="y":
-		act="nano "+new
-		os.system(act)
+	if os.path.exists(new):
+		os.system("python3 chongfu.py")
 	else:
-		print("请稍后自己手动编辑"+new+"文件")
+		act="cp model.x.yaml "+new
+		os.system(act)
+		write=input("是否直接编辑题目?(y/n):")
+		if write=="y":
+			act="nano "+new
+			os.system(act)
+		else:
+			print("请稍后自己手动编辑"+new+"文件")
 
 if 模式=="3":
 	rf.fenxi()
 
 if 模式=="4":
 	处理错题()
+
+if 模式=='5':
+	print("此功能为:将已编辑过的题目进行打包方便发送给听话的便当.")
+	pack=input("\n是否(y/n)继续:")
+	print("\n")
+	if pack=="y":
+		name=rf.name+"的所有题目！.tar.gz"
+		dirname=rf.name+"的所有题目"
+		if os.path.exists(name):
+			print("似乎已经存在已经打包但未发送的题目了...请先将\033[36m "+name+"\033[0m 发送给\033[36m听话的便当\033[0m！")
+		else:
+			do="mkdir "+dirname+" && cp *.yaml "+dirname+" && rm -rf "+dirname+"/config.yaml "+dirname+"/model.x.yaml"
+			os.system(do)
+			查重="ls "+str(dirname)+" >> 文件.txt"
+			os.system(查重)
+			with open("文件.txt","r") as f:
+				重复=f.read()
+				重复=重复.replace("\n"," ")
+			act="rm "+重复
+			os.system(act)
+			tar="tar -zcvf "+name+" "+dirname+" && rm 文件.txt && rm -rf "+dirname
+			os.system(tar)
+			print("\n已经将你出的所有题目打包至压缩文件 \033[36m"+name+"\033[0m 啦！请尽快发给\033[36m听话的便当\033[0m(联系方式在编辑题目时应该看见了吧🤔)")
 
 if 模式=="a":
 	os.system("clear")

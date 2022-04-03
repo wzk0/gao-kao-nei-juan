@@ -19,6 +19,7 @@ def gui():
 	print("2. 我要出题")
 	print("3. 分析报告")
 	print("4. 错题重做")
+	print("5. 打包题目")
 	print("a. 关于")
 	print("q. 退出程序")
 

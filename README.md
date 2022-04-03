@@ -14,7 +14,9 @@
 
 ## 功能
 
-![如图所示](https://raw.githubusercontent.com/wzk0/photo/main/IMG_20220313_024016.jpg)
+![如图所示](https://ghproxy.com/https://raw.githubusercontent.com/wzk0/photo/main/IMG_20220403_171150.jpg)
+
+![做题](https://ghproxy.com/https://raw.githubusercontent.com/wzk0/photo/main/IMG_20220403_171219.jpg)
 
 ## 使用
 
@@ -67,12 +69,14 @@ git clone https://github.com/wzk0/gao-kao-nei-juan.git
 ├── do.py	##题目相关
 ├── main.py	##主框架
 ├── model.x.yaml	##出题模板
-└── rf.py	##配置读取
+├── rf.py	##配置读取
+├── model.x.yaml        ##出题模板
+└── chongfu.py	##查重打包功能
 ```
 
 有些地方提供了简单的注释！
 
-运行过程中会产生五个缓存文件(主动生成)并储存在`.temp`目录，
+运行过程中会产生五(或者更多)个缓存文件(主动生成)并储存在`.temp`目录，
 
 一个是积分(`money`)文件(初始值为`0`);
 
