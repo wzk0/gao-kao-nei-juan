@@ -24,11 +24,11 @@ def gui():
 	print("q. 退出程序")
 
 def fenxi():
-	with open(".temp/all.txt",'r') as f:
+	with open(".data/all.txt",'r') as f:
 		全部题数=f.read()
-	with open(".temp/right.txt",'r') as f:
+	with open(".data/right.txt",'r') as f:
 		正确题数=f.read()
-	with open(".temp/wrong.txt",'r') as f:
+	with open(".data/wrong.txt",'r') as f:
 		错误题数=f.read()
 	os.system("clear")
 	print(name+"同学:\n")

@@ -1,6 +1,6 @@
 # 内卷(高中)
 
---一个简易的快速的做题/出题/分析报告程序(高中)
+> 一个简易的快速的做题/出题/分析报告程序(高中)
 
 ## 初衷
 
@@ -14,9 +14,9 @@
 
 ## 功能
 
-![如图所示](https://ghproxy.com/https://raw.githubusercontent.com/wzk0/photo/main/IMG_20220403_171150.jpg)
+![如图所示](https://ghproxy.com/https://raw.githubusercontent.com/wzk0/photo/main/2022-04-22%2021-10-46%20%E7%9A%84%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png)
 
-![做题](https://ghproxy.com/https://raw.githubusercontent.com/wzk0/photo/main/IMG_20220403_171219.jpg)
+![做题](https://ghproxy.com/https://raw.githubusercontent.com/wzk0/photo/main/2022-04-22%2021-10-35%20%E7%9A%84%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png)
 
 ## 使用
 
@@ -76,7 +76,7 @@ git clone https://github.com/wzk0/gao-kao-nei-juan.git
 
 有些地方提供了简单的注释！
 
-运行过程中会产生五(或者更多)个缓存文件(主动生成)并储存在`.temp`目录，
+运行过程中会产生五(或者更多)个数据文件(主动生成)并储存在`.data`目录，
 
 一个是积分(`money`)文件(初始值为`0`);
 
